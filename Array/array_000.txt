@@ -34,3 +34,80 @@
 34. Minimum no. of operations required to make an array palindrome
 35. Median of 2 sorted arrays of equal size
 36. Median of 2 sorted arrays of different size
+
+** Arrays **
+
+1. In Go language, an array is of value type not of reference
+type. So when the array is assigned to a new variable, then the
+changes made in the new variable do not affect the original
+array.
+2. We can directly compare two arrays using == operator.
+
+----    Create and Iterate an Array    ----
+
+var myArray [3]string
+myArray[2] = "Junior"
+for i := 0; i < len(myArray); i++ {
+	fmt.Println(myArray[i])
+}
+
+// Range
+for k, v := range myArray {
+	fmt.Printf("%v, %v \n", k, v)
+}
+
+
+----     Using shorthand declaration    ----
+1. arr1:= [3]int{9,7,6}
+
+Creating an array whose size is determined by the number of elements present in it
+Using ellipsis
+2. arr2:= [...]int{9,7,6,4,5,3,2,4}
+
+3. arr3:= [3]int{9,3,5}
+
+
+
+** Slice **
+
+1. Slice is a variable-length sequence which stores elements of a
+similar type, you are not allowed to store different type of elements
+in the same slice.
+2. It is just like an array having an index value and length, but the
+size of the slice is resized they are not in fixed-size just like an array.
+3. Internally, slice and an array are connected with each other, a slice is
+a reference to an underlying array. It is allowed to store duplicate elements
+in the slice.
+4. A slice contains three components:
+   Pointer: The pointer is used to points to the first element of the array that is accessible through the slice. Here, it is not necessary that the pointed element is the first element of the array.
+   Length: The length is the total number of elements present in the array.
+   Capacity: The capacity represents the maximum size upto which it can expand.
+
+---   Creating a Slice from an Array   ---
+
+arr := [7]string{"This", "is", "the", "tutorial", "of", "Go", "language"}
+// Creating a slice
+mySlice := arr[1:6]
+
+// Display length of the slice
+fmt.Printf("Length of the slice: %d", len(mySlice))
+
+// Display the capacity of the slice
+fmt.Printf("\nCapacity of the slice: %d", cap(mySlice))
+
+
+
+---   Slice Literal  ---
+1. The creation of slice literal is just like an array literal, but with one
+difference you are not allowed to specify the size of the slice in the square
+braces[]
+
+var mySlice1 = []string{"Geeks", "for", "Geeks"}
+or
+oRignAl_slice := []int{90, 60, 40, 50, 34, 49, 30}
+
+using make():
+Creating another array of size 7 and return the reference of the slice using make
+function
+
+var mySlice2 = make([]int, 7)

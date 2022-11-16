@@ -1,13 +1,19 @@
 package main
 
-import "Final500Go/Array"
+import (
+	"Final500Go/BinarySearchTree"
+)
 
 func main() {
-	//arr := []int{-2, 10, 13, -40, 21, 1, -29, 12, -61, 70, 1000, -111}
-	//Array.Array005(arr)
-	//for _, ele := range arr {
-	//	fmt.Printf("%d\t", ele)
-	//}
 
-	Array.Array006()
+	//fmt.Println(Stack.Stack0009("{}"))
+	//ipSlice := []int{3, 5, 4, 23}  // SLice
+	//ipArray := [4]int{3, 5, 4, 23} //Array
+	//Array.Array001(ipSlice)
+	//var myArray [3]string
+	//myArray[2] = "Junior"
+	//for k, v := range myArray {
+	//	fmt.Printf("%v, %v \n", k, v)
+	//}
+	BinarySearchTree.BST()
 }

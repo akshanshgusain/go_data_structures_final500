@@ -33,11 +33,16 @@ func (n *Node) Insert(key int) {
 // Search
 // Returns True if the given key exist in the tree
 func (n *Node) Search(key int) bool {
+	if n == nil {
+		return false
+	}
 	if key < n.Data {
 		n.Left.Search(key)
 	} else if key > n.Data {
 		n.Right.Search(key)
 	}
+
+	return true
 }
 
 func BST() {

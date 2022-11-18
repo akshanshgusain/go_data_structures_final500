@@ -32,6 +32,7 @@ func (n *Node) Insert(key int) {
 
 // Search
 // Returns True if the given key exist in the tree
+
 func (n *Node) Search(key int) bool {
 	if n == nil {
 		return false
@@ -41,7 +42,6 @@ func (n *Node) Search(key int) bool {
 	} else if key > n.Data {
 		n.Right.Search(key)
 	}
-
 	return true
 }
 

@@ -1,8 +1,6 @@
 package main
 
-import (
-	"Final500Go/BinarySearchTree"
-)
+import "Final500Go/Heap"
 
 func main() {
 
@@ -15,5 +13,6 @@ func main() {
 	//for k, v := range myArray {
 	//	fmt.Printf("%v, %v \n", k, v)
 	//}
-	BinarySearchTree.BST()
+	//BinarySearchTree.BST()
+	Heap.Execute()
 }

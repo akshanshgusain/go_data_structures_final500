@@ -40,6 +40,10 @@ func (h *Heap) maxHeapifyDown(index int) {
 		// is smaller
 		if h.array[index] < h.array[childToCompare] {
 			h.swap(index, childToCompare)
+			index = childToCompare
+			l, r = left(index), right(index)
+		} else {
+			return
 		}
 	}
 }

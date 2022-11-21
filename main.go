@@ -1,6 +1,8 @@
 package main
 
-import "Final500Go/Heap"
+import (
+	"Final500Go/Graph"
+)
 
 func main() {
 
@@ -14,5 +16,5 @@ func main() {
 	//	fmt.Printf("%v, %v \n", k, v)
 	//}
 	//BinarySearchTree.BST()
-	Heap.Execute()
+	Graph.Execute()
 }

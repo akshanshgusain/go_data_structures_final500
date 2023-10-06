@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// Helper function to convert a slice into a max-heap.
+// MaxHeap Helper function to convert a slice into a max-heap.
 type MaxHeap []int
 
 func (h MaxHeap) Len() int            { return len(h) }
@@ -54,10 +54,24 @@ func maxSlidingWindow(nums []int, k int) []int {
 	return result
 }
 
-func main() {
+func runner() {
 	nums := []int{1, 3, -1, -3, 5, 3, 6, 7}
 	k := 3
 
 	result := maxSlidingWindow(nums, k)
 	fmt.Println(result) // Output: [3 3 5 5 6 7]
+}
+
+func main() {
+	maxHeap := &MaxHeap{10, 5, 15, 8, 20}
+	heap.Init(maxHeap)
+
+	// Push elements into the max heap
+	heap.Push(maxHeap, 25)
+	heap.Push(maxHeap, 12)
+
+	// Pop elements from the max heap (they will be in descending order)
+	for maxHeap.Len() > 0 {
+		fmt.Printf("%d ", heap.Pop(maxHeap))
+	}
 }

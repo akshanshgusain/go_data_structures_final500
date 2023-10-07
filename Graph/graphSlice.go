@@ -30,8 +30,8 @@ func (g *GraphSlice) AddEdge(u, v int) {
 	}
 }
 
-// PrintGraph prints the graph's adjacency matrix representation.
-func (g *GraphSlice) PrintGraph() {
+// PrintGraphX prints the graph's adjacency matrix representation.
+func (g *GraphSlice) PrintGraphX() {
 	for i := 0; i < g.vertices; i++ {
 		for j := 0; j < g.vertices; j++ {
 			fmt.Printf("%d ", g.adjacency[i][j])
@@ -53,5 +53,5 @@ func main() {
 	graph.AddEdge(3, 4)
 
 	// Print the graph
-	graph.PrintGraph()
+	graph.PrintGraphX()
 }
